@@ -4,9 +4,7 @@ let container_tasxs= document.querySelector(".container-tasxs")
 let arrayoftasks= [];
 
 
-   if(localStorage.getItem("tasks")){
-    arrayoftasks =+ JSON.Parse(localStorage.getItem("tasks"))
-}
+arrayoftasks =localStorage.tasks || []
 getDataFromLocalStorage()
 submit.onclick=function(){
     if(input.value !=""){
